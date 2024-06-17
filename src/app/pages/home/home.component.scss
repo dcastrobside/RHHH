@@ -1,0 +1,48 @@
+section.home {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 165px - 108px);
+  background-image: url("/assets/images/back_truck_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;  
+  background-position: right;
+
+  div.container {
+    z-index: 50;
+  }
+
+  div.gradient {
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: linear-gradient(
+      90deg,
+      rgba(26, 26, 26, 0.87),
+      rgba(217, 217, 217, 0)
+    );
+    width: 50%;
+    z-index: 1;
+  }
+}
+
+.title {
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 8px 8px 13px #252525;
+  margin-bottom: 2.8rem;
+  font-size: 5.2rem;
+}
+
+.first-section {
+  min-height: 70vh !important;
+  align-content: center;
+}
+
+img.worker {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 65vh;
+}
