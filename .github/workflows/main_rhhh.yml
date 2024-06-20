@@ -57,5 +57,5 @@ jobs:
         with:
           app-name: 'RHHH'
           slot-name: 'Production'
-          package: .
+          package: 'dist/RHHH'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0E7593B1E7384FDFB000525C0C858BB0 }}
