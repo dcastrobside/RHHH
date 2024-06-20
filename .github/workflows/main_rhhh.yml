@@ -24,15 +24,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present
-
-
-
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
-        with:
-          name: node-app
-          path: release.zip
+          npm run build -- --prod --if-present
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,5 +42,5 @@ jobs:
         with:
           app-name: 'RHHH'
           slot-name: 'Production'
-          package: '/dist/hrrr'
+          package: 'dist/hrrr'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0E7593B1E7384FDFB000525C0C858BB0 }}
