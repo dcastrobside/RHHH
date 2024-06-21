@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { JoinusComponent } from './pages/joinus/joinus.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SuccesInfoComponent } from './succes-info/succes-info.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ServicesComponent,
     JoinusComponent,
-    ContactComponent
+    ContactComponent,
+    SuccesInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

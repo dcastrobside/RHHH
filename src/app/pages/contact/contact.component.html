@@ -7,7 +7,7 @@
           <h2 class="title">¿CÓMO PODEMOS AYUDARTE?</h2>
           <h4>Nos pondremos en contacto contigo a la brevedad.</h4>
   
-          <form [formGroup]="frmContact" style="text-align: end;" class="row">
+          <form [formGroup]="frmContact" (submit)="save()" style="text-align: end;" class="row">
 
             <div class="col s12 m6">
 
@@ -69,14 +69,14 @@
                 <textarea
                 placeholder="Escriba un mensaje"
                 rows="15"
-                formControlName="correo"
+                formControlName="mensaje"
                 rows="4" cols="50"
                 class="validate custom"
               ></textarea>
             </div>
   
             <div class="col s12 ">
-                <button class="waves-effect waves-light btn btn-large orange">ENVIAR</button>
+                <button type="submit" [disabled]="sending" class="waves-effect waves-light btn btn-large orange">ENVIAR</button>
             </div>
           
           </form>

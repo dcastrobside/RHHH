@@ -5,6 +5,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { JoinusComponent } from './pages/joinus/joinus.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { SuccesInfoComponent } from './succes-info/succes-info.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,9 @@ const routes: Routes = [
   {
     component:ContactComponent,
     path: 'contact'
+  }, {
+    component:SuccesInfoComponent,
+    path: 'success'
   },
   {
     redirectTo:'home',
