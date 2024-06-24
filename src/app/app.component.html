@@ -28,25 +28,25 @@
 <aside class="sidebar" [@slideInOut]="sidebarState">
   <ul >
     <li>
-      <a (click)="toggleSidebar()" [routerLink]="['home']" [routerLinkActive]="['active']">Inicio</a>
+      <a (click)="hideSidebar()" [routerLink]="['home']" [routerLinkActive]="['active']">Inicio</a>
     </li>
     <li>
-      <a (click)="toggleSidebar()" [routerLink]="['about']" [routerLinkActive]="['active']">Sobre nosotros</a>
+      <a (click)="hideSidebar()" [routerLink]="['about']" [routerLinkActive]="['active']">Sobre nosotros</a>
     </li>
     <li>
-      <a (click)="toggleSidebar()" [routerLink]="['services']" [routerLinkActive]="['active']">Servicios</a>
+      <a (click)="hideSidebar()" [routerLink]="['services']" [routerLinkActive]="['active']">Servicios</a>
     </li>
     <li>
-      <a (click)="toggleSidebar()" [routerLink]="['joinus']" [routerLinkActive]="['active']">Reclutamiento</a>
+      <a (click)="hideSidebar()" [routerLink]="['joinus']" [routerLinkActive]="['active']">Reclutamiento</a>
     </li>
     <li>
-      <a (click)="toggleSidebar()" [routerLink]="['contact']" [routerLinkActive]="['active']">Contacto</a>
+      <a (click)="hideSidebar()" [routerLink]="['contact']" [routerLinkActive]="['active']">Contacto</a>
     </li>
   </ul>
 
 </aside>
 
-<main (click)="toggleSidebar()" >
+<main (click)="hideSidebar()">
   <div class="containers">
     <router-outlet></router-outlet>
   </div>

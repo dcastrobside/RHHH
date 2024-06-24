@@ -30,6 +30,10 @@ export class AppComponent {
   toggleSidebar() {
     this.sidebarState = this.sidebarState === 'out' ? 'in' : 'out';
   }
-  
+
+  hideSidebar() {
+    this.sidebarState =  'out';
+  }
+
   display:boolean = false;
 }
