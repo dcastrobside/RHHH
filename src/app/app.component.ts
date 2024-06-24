@@ -36,4 +36,9 @@ export class AppComponent {
   }
 
   display:boolean = false;
+
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }

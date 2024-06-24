@@ -79,11 +79,11 @@
 
           <div class="col s3">
             <h5>Compañia</h5>
-            <span><a [routerLink]="['about']">Sobre nosotros</a></span>
+            <span><a (click)="scrollToTop()" [routerLink]="['about']">Sobre nosotros</a></span>
           </div>
           <div class="col s3">
             <h5>Servicios</h5>
-            <span><a [routerLink]="['services']">Logística</a></span>
+            <span><a  (click)="scrollToTop()"  [routerLink]="['services']">Logística</a></span>
           </div>
           <div class="col s6">
             <h5>Contacto</h5>
