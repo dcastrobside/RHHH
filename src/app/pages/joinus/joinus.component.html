@@ -7,12 +7,12 @@
         <h2 class="title">¡ÚNETE A NUESTRO EQUIPO!</h2>
         <h4>Estamos buscando tu talento.</h4>
 
-        <form [formGroup]="frmJoinUs" style="text-align: end;">
+        <form [formGroup]="frmJoinUs" (ngSubmit)="save()" style="text-align: end;">
        
             <input
               id="nombre"
               placeholder="Nombre"
-              formControlName="Nombre"
+              formControlName="nombre"
               class="validate custom"
             />
         
@@ -30,18 +30,18 @@
           >
             <div class="btn">
               <span>Seleccionar CV <small>(.pdf)</small></span>
-              <input type="file" accept="application/pdf" />
+              <input type="file"  formControlName="file" (change)="onArchivoSeleccionado($event)" accept="application/pdf" />
             </div>
             <div class="file-path-wrapper">
-              <input
+              <input              
                 class="file-path validate"
-                type="text"
+                type="text"              
                 placeholder="Sube tu archivo"
               />
             </div>
           </div>
 
-          <button class="waves-effect waves-light btn btn-large orange">ENVIAR</button>
+          <button type="submit" [disabled]="sending" class="waves-effect waves-light btn btn-large orange">ENVIAR</button>
         </form>
 
       

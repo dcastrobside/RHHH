@@ -77,3 +77,21 @@ li {
     color: #02a3da;
   }
 }
+
+
+
+form.ng-submitted{
+  input.ng-invalid{
+  
+    border-bottom: solid 3px red;
+  }
+
+  textarea.ng-invalid{
+  
+    border-bottom: solid 3px red;
+  }
+  
+  input.ng-valid{
+    border-bottom: solid 3px #4CAF50 !important;
+  }
+}
