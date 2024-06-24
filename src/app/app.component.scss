@@ -1,0 +1,32 @@
+
+.sidebar{
+    position: fixed;
+    top: 0px;
+    display: block;
+    z-index: 5;
+    width: 200px;
+    background-color: #15354f;
+    padding: 10px 20px;
+    height: 100vh;
+
+    a > i {
+        cursor: pointer;
+    }
+
+    ul{
+
+        li{
+            font-size: 1.3rem;
+            /* color: white; */
+            /* line-height: 1.5rem; */
+            /* height: 2rem; */
+            padding: 10px 5px;
+            border-bottom: 1px solid #ffffff1a;
+
+           
+        }
+        li:has(a.active){
+            background-color: #0f2d4538;
+        }
+    }
+}

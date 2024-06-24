@@ -1,9 +1,10 @@
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">
+<nav >
+  <div class="nav-wrapper" >
+    <a  class="brand-logo">
       <img alt="logo" class="mt-2" src="/assets/images/Logo.png" />
     </a>
-    <a href="#!" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <a (click)="toggleSidebar()"  data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="    font-size: 2.5rem;
+    cursor: pointer;">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li>
         <a [routerLink]="['home']" [routerLinkActive]="['active']">Inicio</a>
@@ -24,7 +25,28 @@
   </div>
 </nav>
 
-<main>
+<aside class="sidebar" [@slideInOut]="sidebarState">
+  <ul >
+    <li>
+      <a (click)="toggleSidebar()" [routerLink]="['home']" [routerLinkActive]="['active']">Inicio</a>
+    </li>
+    <li>
+      <a (click)="toggleSidebar()" [routerLink]="['about']" [routerLinkActive]="['active']">Sobre nosotros</a>
+    </li>
+    <li>
+      <a (click)="toggleSidebar()" [routerLink]="['services']" [routerLinkActive]="['active']">Servicios</a>
+    </li>
+    <li>
+      <a (click)="toggleSidebar()" [routerLink]="['joinus']" [routerLinkActive]="['active']">Reclutamiento</a>
+    </li>
+    <li>
+      <a (click)="toggleSidebar()" [routerLink]="['contact']" [routerLinkActive]="['active']">Contacto</a>
+    </li>
+  </ul>
+
+</aside>
+
+<main (click)="toggleSidebar()" >
   <div class="containers">
     <router-outlet></router-outlet>
   </div>
